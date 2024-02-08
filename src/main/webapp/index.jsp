@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beautiful UI Page</title>
+<title>Sample UI with Various Components</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -42,14 +42,61 @@ h1 {
 .button:hover {
   background-color: #45a049;
 }
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Welcome to Our Beautiful Page!</h1>
-  <p>This is a sample HTML page with a beautiful UI.</p>
-  <a href="#" class="button">Click Me</a>
+  <h1>Sample UI with Various Components</h1>
+  <form action="#" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="button">Submit</button>
+  </form>
 </div>
 
 </body>
